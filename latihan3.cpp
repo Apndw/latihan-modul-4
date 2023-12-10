@@ -3,27 +3,26 @@
 using namespace std;
 
 int main() {
-    int bilangan1, bilangan2, hasil = 1;
+  int bil1, bil2, kpk;
 
-    cout << "Masukan bilangan pertama anda: ";
-    cin >> bilangan1;
+  cout << "Masukan bilangan pertama anda: ";
+  cin >> bil1;
 
-    cout << "Masukan bilangan kedua anda: ";
-    cin >> bilangan2;
+  cout << "Masukan bilangan kedua anda: ";
+  cin >> bil2;
 
-    if (bilangan1 < bilangan2) {
-        int temp = bilangan1;
-        bilangan1 = bilangan2;
-        bilangan2 =  temp;
+  kpk = (bil1 > bil2) ? bil2 : bil1;
+
+  while (true) {
+    if (kpk % bil1 == 0 && kpk % bil2 == 0) {
+      cout << "KPK dari " << bil1 << " dan " << bil2 << " adalah " << kpk << endl;
+      break;
     }
 
-    hasil = bilangan1;
+    cout << kpk << endl;
 
-    while (hasil % bilangan2 != 0) {
-        hasil += hasil;
-    }
+    kpk++;
+  }
 
-    cout << hasil << endl;
-
-    return 0;
+  return 0;
 }

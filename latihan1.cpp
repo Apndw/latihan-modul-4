@@ -3,24 +3,24 @@
 using namespace std;
 
 int main() {
-    int bilangan, hasil;
+  int bilangan, index, hasil = 0;
 
-    cout << "Masukan bilangan anda: ";
-    cin >> bilangan;
+  cout << "Masukan bilangan : ";
+  cin >> bilangan;
 
-    cout << bilangan << " = ";
+  cout << "Total Nilai = ";
 
-    while (bilangan > 0) {
-        if (bilangan != 1) {
-            cout << bilangan << " + ";
-        } else {
-            cout << bilangan << " = ";
-        }
-        hasil += bilangan;
-        bilangan--;
+  for (index = bilangan; index > 0; index--) {
+    if (index != 1) {
+      cout << index << " + ";
+    } else {
+      cout << index << " = ";
     }
 
-    cout << hasil << endl;
+    hasil += index;
+  }
 
-    return 0;
+  cout << hasil << endl;
+
+  return 0;
 }
