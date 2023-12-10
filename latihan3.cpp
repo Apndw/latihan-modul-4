@@ -19,8 +19,6 @@ int main() {
       break;
     }
 
-    cout << kpk << endl;
-
     kpk++;
   }
 
